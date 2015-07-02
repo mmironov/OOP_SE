@@ -18,6 +18,8 @@ class Account {
     static const int NUMBER_LENGTH = 17;
     static const int MIN_NAME_LENGTH = 6;
     
+    static const int STEP_AMOUNT = 100;
+    
     static const char* DEFAULT_IBAN;
     
     double balance;
@@ -87,6 +89,27 @@ public:
         return *this;
     }
     
+    Account& operator+=(double amount)
+    {
+        deposit(amount);
+        
+        return *this;
+    }
+    
+    Account& operator-=(double amount)
+    {
+        withdraw(amount);
+        
+        return *this;
+    }
+    
+    Account& operator++()
+    {
+        deposit(STEP_AMOUNT);
+        
+        return *this;
+    }
+    
     void deposit(double amount);
     void withdraw(double amount);
 
@@ -98,4 +121,9 @@ public:
     const char* getName() const;
     
     void print() const;
+    
+    friend Account& operator++(Account& account, int i);
 };
+
+bool operator<(const Account& left, const Account& right);
+bool operator<(double left, const Account& right);

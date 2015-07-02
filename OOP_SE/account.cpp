@@ -65,3 +65,19 @@ void Account::print() const
     cout << "Account number: " << getNumber() << endl;
     cout << "Account balance: " << getBalance() << endl;
 }
+
+bool operator<(const Account& left, const Account& right)
+{
+    return left.getBalance() < right.getBalance();
+}
+
+bool operator<(double left, const Account& right)
+{
+    return left < right.getBalance();
+}
+
+Account& operator++(Account& account, int i)
+{
+    account.deposit(Account::STEP_AMOUNT);
+    return account;
+}

@@ -15,10 +15,12 @@ int main(int argc, const char * argv[]) {
     Account acc("12345678912345678");
     
     acc.setName("Salary account");
-    acc.deposit(500);
-    acc.deposit(1000);
-    acc.withdraw(200);
-    acc.withdraw(100000);
+    acc += 500;
+    acc += 100;
+    acc -= 200;
+    acc -= 100000;
+    ++acc;
+    acc++;
     
     Account acc2("123");
     acc2 = acc;
@@ -26,7 +28,10 @@ int main(int argc, const char * argv[]) {
     
     acc.print();
     
-    Account accounts[5];
+    if (200 < acc)
+    {
+        
+    }
     
     return 0;
 }
