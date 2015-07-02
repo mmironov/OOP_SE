@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F4BF92301B442AE100BC63B1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4BF922F1B442AE100BC63B1 /* main.cpp */; };
+		F4BF92471B447FEB00BC63B1 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4BF92451B447FEB00BC63B1 /* account.cpp */; };
+		F4BF924D1B44802100BC63B1 /* savings_account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4BF924B1B44802100BC63B1 /* savings_account.cpp */; };
+		F4BF92501B44802C00BC63B1 /* current_account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4BF924E1B44802C00BC63B1 /* current_account.cpp */; };
+		F4BF92531B44809900BC63B1 /* portfolio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4BF92511B44809900BC63B1 /* portfolio.cpp */; };
+		F4BF92561B44815D00BC63B1 /* combined_account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4BF92541B44815D00BC63B1 /* combined_account.cpp */; };
+		F4BF92591B44820400BC63B1 /* expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4BF92571B44820400BC63B1 /* expression.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,18 @@
 /* Begin PBXFileReference section */
 		F4BF922C1B442AE100BC63B1 /* OOP_SE */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OOP_SE; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BF922F1B442AE100BC63B1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F4BF92451B447FEB00BC63B1 /* account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = account.cpp; sourceTree = "<group>"; };
+		F4BF92461B447FEB00BC63B1 /* account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = account.h; sourceTree = "<group>"; };
+		F4BF924B1B44802100BC63B1 /* savings_account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = savings_account.cpp; sourceTree = "<group>"; };
+		F4BF924C1B44802100BC63B1 /* savings_account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savings_account.h; sourceTree = "<group>"; };
+		F4BF924E1B44802C00BC63B1 /* current_account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = current_account.cpp; sourceTree = "<group>"; };
+		F4BF924F1B44802C00BC63B1 /* current_account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = current_account.h; sourceTree = "<group>"; };
+		F4BF92511B44809900BC63B1 /* portfolio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = portfolio.cpp; sourceTree = "<group>"; };
+		F4BF92521B44809900BC63B1 /* portfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portfolio.h; sourceTree = "<group>"; };
+		F4BF92541B44815D00BC63B1 /* combined_account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = combined_account.cpp; sourceTree = "<group>"; };
+		F4BF92551B44815D00BC63B1 /* combined_account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = combined_account.h; sourceTree = "<group>"; };
+		F4BF92571B44820400BC63B1 /* expression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = expression.cpp; sourceTree = "<group>"; };
+		F4BF92581B44820400BC63B1 /* expression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expression.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				F4BF922F1B442AE100BC63B1 /* main.cpp */,
+				F4BF92451B447FEB00BC63B1 /* account.cpp */,
+				F4BF92461B447FEB00BC63B1 /* account.h */,
+				F4BF924B1B44802100BC63B1 /* savings_account.cpp */,
+				F4BF924C1B44802100BC63B1 /* savings_account.h */,
+				F4BF924E1B44802C00BC63B1 /* current_account.cpp */,
+				F4BF924F1B44802C00BC63B1 /* current_account.h */,
+				F4BF92511B44809900BC63B1 /* portfolio.cpp */,
+				F4BF92521B44809900BC63B1 /* portfolio.h */,
+				F4BF92541B44815D00BC63B1 /* combined_account.cpp */,
+				F4BF92551B44815D00BC63B1 /* combined_account.h */,
+				F4BF92571B44820400BC63B1 /* expression.cpp */,
+				F4BF92581B44820400BC63B1 /* expression.h */,
 			);
 			path = OOP_SE;
 			sourceTree = "<group>";
@@ -118,7 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BF92531B44809900BC63B1 /* portfolio.cpp in Sources */,
+				F4BF92591B44820400BC63B1 /* expression.cpp in Sources */,
 				F4BF92301B442AE100BC63B1 /* main.cpp in Sources */,
+				F4BF92471B447FEB00BC63B1 /* account.cpp in Sources */,
+				F4BF924D1B44802100BC63B1 /* savings_account.cpp in Sources */,
+				F4BF92561B44815D00BC63B1 /* combined_account.cpp in Sources */,
+				F4BF92501B44802C00BC63B1 /* current_account.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
