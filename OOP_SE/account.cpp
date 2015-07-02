@@ -23,16 +23,6 @@ void Account::deposit(double amount)
     balance += amount;
 }
 
-void Account::withdraw(double amount)
-{
-    if (amount < 0)
-    {
-        return;
-    }
-    
-    balance -= amount;
-}
-
 double Account::getBalance() const
 {
     return balance;

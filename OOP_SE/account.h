@@ -9,10 +9,11 @@
 #ifndef __OOP_SE__account__
 #define __OOP_SE__account__
 
-#include <stdio.h>
+#include <iostream>
 #include <cstring>
+#include "printable.h"
 
-class Account {
+class Account : public Printable {
     static const int NUMBER_LENGTH = 17;
     static const int MIN_NAME_LENGTH = 6;
     
@@ -20,7 +21,6 @@ class Account {
     
     static const char* DEFAULT_IBAN;
     
-    double balance;
     char number[NUMBER_LENGTH];
     char* name;
     
@@ -38,6 +38,8 @@ class Account {
     {
         delete [] name;
     }
+protected:
+    double balance;
 public:
     Account()
     {
@@ -71,7 +73,7 @@ public:
         copy(other);
     }
     
-    ~Account()
+    virtual ~Account()
     {
         del();
     }
@@ -109,7 +111,7 @@ public:
     }
     
     void deposit(double amount);
-    void withdraw(double amount);
+    virtual void withdraw(double amount) = 0;
 
     double getBalance() const;
     

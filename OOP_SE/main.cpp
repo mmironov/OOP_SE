@@ -9,30 +9,21 @@
 #include <iostream>
 #include "account.h"
 #include "list.h"
+#include "current_account.h"
+#include "savings_account.h"
+#include "combined_account.h"
+#include "printable.h"
 using namespace std;
 
-int main(int argc, const char * argv[]) {
-    
-    Account acc("12345678912345678");
-    
-    acc.setName("Salary account");
-    acc += 500;
-    acc += 100;
-    acc -= 200;
-    acc -= 100000;
-    ++acc;
-    acc++;
-    
-    Account acc2("123");
-    acc2 = acc;
-    acc2.setName("PAYMENTS");
-    
-    acc.print();
-    
-    if (200 < acc)
+void printAll(Printable* items[], int length)
+{
+    for(int i=0; i < length; ++i)
     {
-        
+        items[i]->print();
     }
+}
+
+int main(int argc, const char * argv[]) {
     
     LinkedList<int> list;
     list.add(20);
@@ -40,6 +31,41 @@ int main(int argc, const char * argv[]) {
     list.add(50);
     
     list.print();
+    
+    int type;
+    cout << "Enter account type (Savings(0); Current(1)): ";
+    cin >> type;
+    
+    Account* account;
+    if (type == 0)
+    {
+        account = new SavingsAccount(17, "18181818181818181");
+        account->setName("Savings");
+    }
+    else
+    {
+        account = new CurrentAccount(1000, "19191919191919191");
+        account->setName("Current");
+    }
+    account->deposit(3000);
+    
+    SavingsAccount* asSavings = dynamic_cast<SavingsAccount*>(account);
+    if (asSavings)
+    {
+        asSavings->payInterest();
+    }
+    
+    account->withdraw(3800);
+    
+    CombinedAccount combined("123", 17, 2000);
+    combined.setName("Combined");
+    combined.deposit(5000);
+    
+    Printable* array[] = {account, &combined};
+    
+    printAll(array, 2);
+    
+    delete account;
     
     return 0;
 }
