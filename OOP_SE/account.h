@@ -12,8 +12,6 @@
 #include <stdio.h>
 #include <cstring>
 
-#endif /* defined(__OOP_SE__account__) */
-
 class Account {
     static const int NUMBER_LENGTH = 17;
     static const int MIN_NAME_LENGTH = 6;
@@ -127,3 +125,5 @@ public:
 
 bool operator<(const Account& left, const Account& right);
 bool operator<(double left, const Account& right);
+
+#endif /* defined(__OOP_SE__account__) */

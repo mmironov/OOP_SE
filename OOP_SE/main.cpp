@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "account.h"
+#include "list.h"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
@@ -32,6 +33,13 @@ int main(int argc, const char * argv[]) {
     {
         
     }
+    
+    LinkedList<int> list;
+    list.add(20);
+    list.add(40);
+    list.add(50);
+    
+    list.print();
     
     return 0;
 }
